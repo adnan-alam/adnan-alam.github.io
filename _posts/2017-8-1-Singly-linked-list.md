@@ -11,16 +11,16 @@ Singly linked list: Singly linked lists contain nodes which have a data field as
 
 <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/408px-Singly-linked-list.svg.png">
 
-            A singly linked list whose nodes contain two fields: an integer value and a link to the next node
-                                    (Source: https://en.wikipedia.org/wiki/Linked_list )
+<h6>(A singly linked list whose nodes contain two fields: an integer value and a link to the next node, Source:https://en.wikipedia.org/wiki/Linked_list )</h6>
 
 
 Let’s get started!
 
-First , we will create a class named Node which will contain a data and a pointer (which is here as next_node) to the next node. Initially we will set the data and next_node(pointer) equal to None so that if we don’t send any data and pointer to the next node, it will return None.
+First , we will create a class named "Node" which will contain a data and a pointer (which is here as next_node) to the next node. Initially we will set the data and next_node(pointer) equal to None so that if we don’t send any data and pointer to the next node, it will return None.
 
-Then create two methods named get_data and get_next and will return the data and the next node respectively.
-We will add another method set_next which will take a new node as a parameter and will set the pointer from previous node towards this node.
+Then create two methods named "get_data" and "get_next" and will return the data and the next node respectively.
+We will add another method "set_next" which will take a new node as a parameter and will set the pointer from previous node towards this node.
+
 
 ```python
 class Node:
@@ -39,7 +39,9 @@ class Node:
         self.next_node = new_node
 ```
 
+
 Now, create a class Linked_list and set the head of the list to None in the __init__ method.
+
 
 ```python
 
@@ -48,7 +50,10 @@ class Linked_list:
     def __init__(self,head=None):
         self.head = head
 ```
-Add a method insert_head , first it will take a data  and create a Node by it and set it to the variable new_node. Then set the pointer of this node towards the next node by sending self.head as parameter. As at the beginning the head is None so the pointer will be set to the None. Now, we will set the node we created as head. So, what does this method do ? The method take data and insert is as head in the linked list. 
+
+
+Add a method "insert_head" , first it will take a data  and create a Node by it and set it to the variable new_node. Then set the pointer of this node towards the next node by sending self.head as parameter. As at the beginning the head is None so the pointer will be set to the None. Now, we will set the node we created as head. So, what does this method do ? The method take data and insert is as head in the linked list. 
+
 
 ```python
 
@@ -57,9 +62,12 @@ def insert_head(self,data):
         new_node.set_next(self.head)
         self.head = new_node
 ```
+
+
 A question can come across your mind, can I insert data as tail ? The answer is yes ,so let’s see how to do it!
 
-This insert_tail method take a data and make a node from it and set it to the variable. Now , two things to be considered. What to do if the list is empty ? Or the list is not empty ? So at first we check if head is None and if it is then we are assured that list is empty and we set the node as head(because there must be an element to add another element as tail). But if head is not None then the list isn’t empty and we traverse the list using the get_next method to go to the end of it. When we find that pointer of the previous node is null, we set the pointer towards the node we created. Yeah! we have inserted an element in the list as tail.
+This "insert_tail" method take a data and make a node from it and set it to the variable. Now , two things to be considered. What to do if the list is empty ? Or the list is not empty ? So at first we check if head is None and if it is then we are assured that list is empty and we set the node as head(because there must be an element to add another element as tail). But if head is not None then the list isn’t empty and we traverse the list using the get_next method to go to the end of it. When we find that pointer of the previous node is null, we set the pointer towards the node we created. Yeah! we have inserted an element in the list as tail.
+
 
 ```python
 
@@ -75,7 +83,9 @@ This insert_tail method take a data and make a node from it and set it to the va
             current.set_next(new_node)
 ```
 
-To delete an element from the linked list create a method named delete which takes a data you want to delete as a parameter. Set head to the variable current and create variable prev which will store the previous element , initially it is equal to None. Now, we traverse through the list to check whether it contains our data or not, if the data is in any Node then we check if there is any previous Node of the Node that contains our data. If there is any previous Node then we set the pointer of the previous Node to the next Node of our data. If there is no previous Node that means our data is the head so we set the next element as head. If we don’t find the data then we go to the next Node by setting current Node to prev variable and next Node of the current Node to current variable
+
+To delete an element from the linked list create a method named "delete" which takes a data you want to delete as a parameter. Set head to the variable current and create variable prev which will store the previous element , initially it is equal to None. Now, we traverse through the list to check whether it contains our data or not, if the data is in any Node then we check if there is any previous Node of the Node that contains our data. If there is any previous Node then we set the pointer of the previous Node to the next Node of our data. If there is no previous Node that means our data is the head so we set the next element as head. If we don’t find the data then we go to the next Node by setting current Node to prev variable and next Node of the current Node to current variable
+ 
  
 ```python
 
@@ -94,7 +104,10 @@ def delete(self,data):
                 prev = current
                 current = current.get_next()
 ```
-To check whether an element is in the linked list or not ,create a method named search which takes a data that we want check if it is in the linked list. First , we set the head to the current variable and we iterate through the list while current is not None and if we get the data in the list we return True  and if we don’t we go to next Node. If we don’t find the data and current is None then we return False. 
+
+
+To check whether an element is in the linked list or not ,create a method named "search" which takes a data that we want check if it is in the linked list. First , we set the head to the current variable and we iterate through the list while current is not None and if we get the data in the list we return True  and if we don’t we go to next Node. If we don’t find the data and current is None then we return False. 
+
 
 ```python
 
@@ -107,7 +120,10 @@ def search(self,data):
                 current = current.get_next()
         return False
 ```
-We want to know the size of the linked list so we create this method size  which initially set head to the current variable and declare a variable count equal to 0. We iterate through the linked list while current is not None  and we increment count by 1 and go to the next element and when current is None i.e. the list is ended we return count.
+
+
+We want to know the size of the linked list so we create this method "size" ,which initially set head to the current variable and declare a variable count equal to 0. We iterate through the linked list while current is not None  and we increment count by 1 and go to the next element and when current is None i.e. the list is ended we return count.
+
 
 ```python
 
@@ -119,9 +135,12 @@ We want to know the size of the linked list so we create this method size  which
             current = current.get_next()
         return count
 ```
+
+
 At last we want to print the linked list as a list we usually see.
-So, create a method print_list, declare a variable to store the head
+So, create a method "print_list", declare a variable to store the head
 and another variable temp which initially stores an empty list. Now we traverse through the linked list while current is not None  and we append every element in the temp list till current is None then we return the list.
+
 
 ```python
 
@@ -134,7 +153,9 @@ and another variable temp which initially stores an empty list. Now we traverse 
         return temp
 ```
 
+
 Now it’s time to check out linked list!
+
 
 ```python
 item1 = 1020
