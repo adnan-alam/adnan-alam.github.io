@@ -22,7 +22,7 @@ First , we will create a class named Node which will contain a data and a pointe
 Then create two methods named get_data and get_next and will return the data and the next node respectively.
 We will add another method set_next which will take a new node as a parameter and will set the pointer from previous node towards this node.
 
-@requires_authorization
+```python
 class Node:
     
     def __init__(self,data=None,next_node=None):
@@ -37,7 +37,7 @@ class Node:
     
     def set_next(self,new_node):
         self.next_node = new_node
-
+```
 
 Now, create a class Linked_list and set the head of the list to None in the __init__ method.
 
