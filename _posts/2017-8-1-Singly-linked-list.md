@@ -9,10 +9,10 @@ Today I will explain how to implement a “Singly linked list” in Python, whic
 
 Singly linked list: Singly linked lists contain nodes which have a data field as well as a 'next' field, which points to the next node in line of nodes. Operations that can be performed on singly linked lists include insertion, deletion and traversal.
 
+<img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/408px-Singly-linked-list.svg.png">
 
-
-A singly linked list whose nodes contain two fields: an integer value and a link to the next node
-(Source: https://en.wikipedia.org/wiki/Linked_list )
+            A singly linked list whose nodes contain two fields: an integer value and a link to the next node
+                                    (Source: https://en.wikipedia.org/wiki/Linked_list )
 
 
 Let’s get started!
@@ -174,6 +174,7 @@ li.insert_tail(50100)
 print(li.print_list())
 >>>[4080, 3060, 1020, 50100]
 ```
+
 It works! 
 
 Feel free to ask any question and comment for any kind of correction.
