@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I'm Adnan Alam, currently student of B.Sc(Hons.) in Mathematics at University of Chittagong. 
+I am learning how to code in python cause I love it. Love to do problem solving ! 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[adnan320324@gmail.com](mailto:adnan320324@gmail.com)
