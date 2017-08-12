@@ -7,7 +7,7 @@ tags: Queue Python Programming Data-structure
 
 Today I’ll talk about how to implement <b>Queue data structure</b> using another data structure Singly linked list in Python. If you want to know how to implement Singly linked list in Python then read this previous blog post [Singly linked list](https://adnan-alam.github.io/Singly-linked-list/).
 
-First, let’s know about Queue data structure. Queue is a particular kind of abstract type data structure, it is a <b>FIFO (First in First out)</b> data structure. In a FIFO data structure , an item inserted in first , will be removed first. Inserting an element in Queue is called <b>enqueue and removing an element from it is called <b>dequeue.
+First, let’s know about Queue data structure. Queue is a particular kind of abstract type data structure, it is a <b>FIFO (First in First out)</b> data structure. In a FIFO data structure , an item inserted in first , will be removed first. Inserting an element in Queue is called <b>enqueue and removing an element from it is called <b>dequeue</b>.
 ![Queue data structure](/images/queue.png)
 
 Here I’ll show you how to enqueue , dequeue and in addition - how to  get the size of queue , check if queue is empty or not, and at last 
@@ -64,7 +64,7 @@ Now it’s time to add a method <b>dequeue</b> to remove the first element from 
             print("Queue is empty.")
 ```
 
-We want to know the size of the Queue so we create this method <b>size</b>  which initially set head(1st element) to the <b>current variable and declares a variable <b>count</b> equal to 0. We iterate through the Queue while current is not None and we increment count by 1 and go to the next element and when current is None i.e. the list is ended we return count which is the size of Queue.
+We want to know the size of the Queue so we create this method <b>size</b>  which initially set head(1st element) to the <b>current</b> variable and declares a variable <b>count</b> equal to 0. We iterate through the Queue while current is not None and we increment count by 1 and go to the next element and when current is None i.e. the list is ended we return count which is the size of Queue.
 
 ```python
 def size(self):
