@@ -86,6 +86,6 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-
-remote_theme: mmistakes/minimal-mistakes
+  
+theme: jekyll-theme-tactilekes
 
