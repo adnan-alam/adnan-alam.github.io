@@ -19,10 +19,10 @@ Under-graduate student of Mathematics at University of Chittagong.
 
 ***
 
-##### Github Profile: https://github.com/adnan-alam
-##### Hackerrank Profile: https://www.hackerrank.com/adnan320324
+###### Github Profile: [https://github.com/adnan-alam](https://github.com/adnan-alam)
+###### Hackerrank Profile: [https://www.hackerrank.com/adnan320324](https://www.hackerrank.com/adnan320324)
 
 ***
 ### Contact me
 
-[adnan320324@gmail.com](mailto:adnan320324@gmail.com)
+[Email: adnan320324@gmail.com](mailto:adnan320324@gmail.com)
