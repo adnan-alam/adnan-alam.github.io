@@ -44,7 +44,6 @@ Now, create a class Linked_list and set the head of the list to None in the __in
 
 
 ```python
-
 class Linked_list:
     
     def __init__(self,head=None):
@@ -56,11 +55,10 @@ Add a method "insert_head" , first it will take a data  and create a Node by it 
 
 
 ```python
-
 def insert_head(self,data):
-        new_node = Node(data)
-        new_node.set_next(self.head)
-        self.head = new_node
+    new_node = Node(data)
+    new_node.set_next(self.head)
+    self.head = new_node
 ```
 
 
@@ -70,17 +68,15 @@ This "insert_tail" method take a data and make a node from it and set it to the 
 
 
 ```python
-
- def insert_tail(self,data):
- 
-        new_node = Node(data)
-        if self.head is None:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.get_next():
-                current = current.get_next()
-            current.set_next(new_node)
+def insert_tail(self,data):
+    new_node = Node(data)
+    current = self.head
+    if current is None:
+        self.head = new_node
+    else:
+        while current.get_next():
+            current = current.get_next()
+        current.set_next(new_node)
 ```
 
 
@@ -88,21 +84,19 @@ To delete an element from the linked list create a method named "delete" which t
  
  
 ```python
-
 def delete(self,data):
-
-        current = self.head
-        prev = None
-        while current:
-            if current.get_data() == data:
-                if prev:
-                    prev.set_next(current.get_next())
-                else:
-                    self.head = current.get_next()
-                break
+    current = self.head
+    prev = None
+    while current:
+        if current.get_data() == data:
+            if prev:
+                prev.set_next(current.get_next())
             else:
-                prev = current
-                current = current.get_next()
+                self.head = current.get_next()
+            break
+        else:
+            prev = current
+            current = current.get_next()
 ```
 
 
@@ -110,51 +104,43 @@ To check whether an element is in the linked list or not ,create a method named 
 
 
 ```python
-
 def search(self,data):
-        current = self.head
-        while current:
-            if current.get_data() == data:
-                return True
-            else:
-                current = current.get_next()
-        return False
+    current = self.head
+    while current:
+        if current.get_data() == data:
+            return True
+        else:
+            current = current.get_next()
+    return False
 ```
 
 
-We want to know the size of the linked list so we create this method "size" ,which initially set head to the current variable and declare a variable count equal to 0. We iterate through the linked list while current is not None  and we increment count by 1 and go to the next element and when current is None i.e. the list is ended we return count.
+To know the size of the linked list, we are going to use dunder/magic method __len__ . Because of using this dunder method we can get the size using len(). This makes our work easier and readable.
 
 
 ```python
-
-  def size(self):
-        current = self.head
-        count = 0
-        while current:
-            count +=1
-            current = current.get_next()
-        return count
+ def __len__(self):
+    return len(self.temp)
 ```
 
 
 At last we want to print the linked list as a list we usually see.
 So, create a method "print_list", declare a variable to store the head
-and another variable temp which initially stores an empty list. Now we traverse through the linked list while current is not None  and we append every element in the temp list till current is None then we return the list.
+and another variable temp which initially stores an empty list. Now we traverse through the linked list while current is not None  and we append every element in the temp list till current is None then we print the list.
 
 
 ```python
-
- def print_list(self):
-        current = self.head
-        temp = []
-        while current:
-            temp.append(current.get_data())
-            current = current.get_next()
-        return temp
+def print_list(self):
+    current = self.head
+    self.temp = []
+    while current:
+        self.temp.append(current.get_data())
+        current = current.get_next()
+    print(self.temp) 
 ```
 
 
-Now it’s time to check out linked list!
+Now it’s time to check out the linked list we have written,
 
 
 ```python
@@ -170,29 +156,23 @@ li.insert_head(item2)
 li.insert_head(item3)
 li.insert_head(item4)
 
-
-print(li.print_list())
-
+li.print_list()
 >>>[4080, 3060, 2040, 1020]
-
 
 print(li.search(3060))
 >>>True
 print(li.search(9010))
 >>>False
 
-
 li.delete(2040)
-print(li.print_list())
+li.print_list()
 >>>[4080, 3060, 1020]
 
-
-print(li.size())
+print(len(li))
 >>>3 
 
-
 li.insert_tail(50100)
-print(li.print_list())
+li.print_list()
 >>>[4080, 3060, 1020, 50100]
 ```
 
