@@ -157,23 +157,23 @@ li.insert_head(item3)
 li.insert_head(item4)
 
 li.print_list()
->>>[4080, 3060, 2040, 1020]
+>>> [4080, 3060, 2040, 1020]
 
 print(li.search(3060))
->>>True
+>>> True
 print(li.search(9010))
->>>False
+>>> False
 
 li.delete(2040)
 li.print_list()
->>>[4080, 3060, 1020]
+>>> [4080, 3060, 1020]
 
 print(len(li))
->>>3 
+>>> 3 
 
 li.insert_tail(50100)
 li.print_list()
->>>[4080, 3060, 1020, 50100]
+>>> [4080, 3060, 1020, 50100]
 ```
 
 It works! 
