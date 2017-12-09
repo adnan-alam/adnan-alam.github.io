@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Datetime module: working with date and time
+title: Datetime module - working with date and time
+tags: python datetime
 ---
-
 Among many built-in modules in Python one module we use frequently is **datetime** module. So , today I’m gonna share what I’ve learned about **datetime** module and how to use it.
 
 Why should we use **datetime** module ? This question may have arrived in your mind, the ans is-  if you want to work with date and time , manipulate them and format them for better user experiences in Python , you should get your hands dirty working with this specific module.
 
 Okay, first let’s import the **datetime** module
+
 
 ```python
 import datetime 
@@ -64,7 +65,7 @@ you can use to find out how many days are remained till birthday like below one
 birthday = datetime.date(2018, 1, 1)
 till_birthday = birthday – tday
 
-print(“Days remained till birthday: {}”.format(till_birthday.days)
+print(“Days remained till birthday: {}”.format(till_birthday.days))
 >>> Days remained till birthday: 24
 ```
 
@@ -76,8 +77,8 @@ When you need to access both date and time at the same time , we can use **datet
 dt = datetime.datetime(2017, 12, 8, 9, 30, 15, 100000)
 
 print(dt)
-print(“Date: {}”.format(dt.date())
-print(“Time: ”.format(dt.time())
+print(“Date: {}”.format(dt.date()))
+print(“Time: ”.format(dt.time()))
 >>> 2017-12-08 09:30:15.100000
 >>> Date: 2017-12-08
 >>> Time:  09:30:15.100000
