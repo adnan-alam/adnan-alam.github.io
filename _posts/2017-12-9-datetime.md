@@ -78,10 +78,10 @@ dt = datetime.datetime(2017, 12, 8, 9, 30, 15, 100000)
 
 print(dt)
 print(“Date: {}”.format(dt.date()))
-print(“Time: ”.format(dt.time()))
+print(“Time: {}”.format(dt.time()))
 >>> 2017-12-08 09:30:15.100000
 >>> Date: 2017-12-08
->>> Time:  09:30:15.100000
+>>> Time: 09:30:15.100000
 ```
 
 Also to know what time it is right now and today’s date,
@@ -132,7 +132,7 @@ print(dt_utcnow)
 >>> 2017-12-08 23:34:19.171335+06:00
 ```
 
-for more readable format there is **strftime(format)** method, returns a string representing the date. There is list of all format codes that supported by **strftime(format)** method here, https://docs.python.org/3/library/datetime.html
+for more readable format there is **strftime(format)** method, returns a string representing the date. There is a list of all format codes that supported by **strftime(format)** method here, https://docs.python.org/3/library/datetime.html
 
 ```python
 print(dt_utcnow.strftime("%B %d, %Y and %I:%M %p")) 
@@ -153,7 +153,7 @@ Sun 10 May 2015 13:54:36 -0700
 
 I hope from this post you’ve got some hints how to use datetime module. To explore more , check out the official documentation: https://docs.python.org/3/library/datetime.html  and also this video tutorial from Corey Schafer : https://www.youtube.com/watch?v=eirjjyP2qcQ&index=15&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7 . Actually , what I’ve written so far in this post is that what I’ve learned from his tutorial.
 
-Any kind of question occurs in your mind regarding this post you can comment that below. Thanks!
+Any kind of question occurs in your mind regarding this post, you can comment that below. Thanks!
 
 
 
