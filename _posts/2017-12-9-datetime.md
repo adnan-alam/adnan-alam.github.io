@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Datetime module: working date and time
+title: Datetime module: working with date and time
 ---
 
 Among many built-in modules in Python one module we use frequently is **datetime** module. So , today I’m gonna share what I’ve learned about **datetime** module and how to use it.
