@@ -11,13 +11,13 @@ Under-graduate student of Mathematics at University of Chittagong.
 
 * Programming Language - Python.
 
-* Web Scraping with python. 
+* Tools: Selenium, Scrapy, BeautifulSoup, Pandas. 
 
 * Familiar with HTML5, CSS.
 
 * Version Control - Git.
 
-* Familiar with Linux Operating Systems (e.g. Ubuntu, Xubuntu).
+* Linux Operating Systems (e.g. Ubuntu, Xubuntu).
 
 ***
 
@@ -27,4 +27,4 @@ Under-graduate student of Mathematics at University of Chittagong.
 ***
 ### Contact me
 
-[Email: adnan.alamcu@gmail.com](mailto:adnan320324@gmail.com)
+[Email: adnan.alamcu@gmail.com](mailto:adnan.alamcu@gmail.com)
